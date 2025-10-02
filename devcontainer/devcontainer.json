@@ -1,0 +1,17 @@
+{
+  "name": "Java Maven Project",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Adiciona o pacote de extensões essenciais para Java no VS Code
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  },
+  // Este comando garante que o Maven é instalado antes de o Codespace estar pronto.
+  "postCreateCommand": "mvn install -DskipTests"
+}
